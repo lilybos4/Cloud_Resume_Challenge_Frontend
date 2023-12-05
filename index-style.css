@@ -1,0 +1,229 @@
+/* Universal Box Sizing */
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+/* HTML and Body Styles */
+html {
+    font-size: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    color: #2e2e2c; /* Dark grey for text */
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+    background-color: #ffffff; /* White background */
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #333; /* Dark background for the navbar */
+    overflow: hidden;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers the navigation links */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.nav-links li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Header Styles */
+h1 {
+    color: #1b5e20; /* Dark green */
+}
+
+/* Wrapper Styles */
+.wrapper {
+    height: 100%;
+    background-color: #ffffff; /* White background for wrapper */
+}
+
+/* Left Column Styles */
+.left {
+    background-color: #e8f5e9; /* Very light shade of green */
+    border: 1px solid #c8e6c9; /* Slightly darker green for the border */
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); /* Optional: Adds subtle shadow to the border */
+    float: right;
+    height: 100%;
+    margin-left: -1px;
+    min-width: 256px;
+    position: fixed;
+    width: 33.33%;
+}
+
+/* Right Column Styles */
+.right {
+    float: right;
+    height: 100%;
+    position: relative;
+    width: 66.66%;
+    background-color: #ffffff; /* White background */
+}
+
+/* Name Hero Section */
+.name-hero {
+    background: #ffffff; /* White background */
+    bottom: 0;
+    height: 290px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 85%;
+}
+
+/* Profile Image Styles */
+.me-img {
+    background: url(https://media-exp1.licdn.com/dms/image/C4E03AQGnLq_IB_mf8Q/profile-displayphoto-shrink_400_400/0/1631022739752?e=1648684800&v=beta&t=eICUjHeH_g9GQEItmEMK1j2gCADwqfjrlccSD_5za58) no-repeat center center;
+    background-size: 100%;
+    background-position: 0px;
+    border-radius: 100%;
+    height: 150px;
+    margin: 0 auto;
+    position: relative;
+    width: 150px;
+}
+
+/* Name and Title Styles */
+.name-hero h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: #388e3c; /* Bright green */
+}
+
+.name-hero h1 em {
+    color: rgba(0, 0, 0, .3);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.name-hero p {
+    color: rgba(0, 0, 0, .75);
+    font-size: .75em;
+    line-height: 1.5;
+    margin: 0 8px 0 0;
+    text-align: center;
+}
+
+.name-hero .name-text {
+    margin: 0 auto;
+    width: 85%;
+}
+
+/* Inner Content Styles */
+.inner {
+    margin: 0 auto;
+    max-width: 975px;
+    padding: 3em;
+    background-color: #ffffff; /* White background */
+}
+
+.inner h1 {
+    font-size: 1.75em;
+}
+
+.inner p {
+    color: rgba(0, 0, 0, .5);
+}
+
+.inner p em {
+    color: rgba(0, 0, 0, 1);
+    font-style: normal;
+}
+
+.inner section {
+    margin: 100px auto;
+    background-color: #ffffff; /* White background */
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    margin-top: -10px;
+    max-width: 570px;
+    padding: 0;
+}
+
+/* Skill Set Styles */
+.skill-set li {
+    background: rgba(0, 0, 0, .75);
+    border-radius: 5px;
+    color: #FFF;
+    display: inline-block;
+    list-style: none;
+    margin: 15px 15px 0 0;
+    padding: 10px;
+    text-align: justify;
+}
+
+.skill-set li:hover {
+    background: #3498db; /* Blue on hover */
+}
+
+/* Responsive Design for Different Screen Sizes */
+@media screen and (max-width: 48em) {
+    .right, .left {
+        float: none;
+        position: relative !important;
+        width: 100%;
+        min-height: 500px;
+    }
+    .handmade {
+        text-align: center !important;
+        margin-top: 0px !important;
+    }
+}
+
+@media screen and (max-width: 75em) {
+    body { font-size: 16px; }
+}
+
+@media screen and (max-width: 60em) {
+    body { font-size: 14px; }
+}
+
+/* Clearfix for Floating Elements */
+.clearfix:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+/* Styles for Handmade Section */
+.handmade {
+    text-align: right;
+    margin-top: 100px;
+}
+.handmade em {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.25em;
+    margin-left: 5px;
+}
